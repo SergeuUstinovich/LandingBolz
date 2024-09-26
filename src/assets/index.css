@@ -1,0 +1,15 @@
+@import 'fonts';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #14d97b;
+  --dark: #05111f;
+  --grey: #002a3a;
+}
+
+body {
+  @apply bg-black;
+}

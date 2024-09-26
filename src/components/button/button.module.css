@@ -1,0 +1,8 @@
+.wrapper {
+  @apply flex px-[20px] py-[16px] border border-green rounded-[200px] text-sm text-green uppercase leading-[100%];
+  font-family: Manrope, sans-serif;
+}
+
+.wrapper:hover {
+  @apply bg-green text-grey;
+}

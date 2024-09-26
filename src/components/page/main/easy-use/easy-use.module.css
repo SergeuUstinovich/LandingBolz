@@ -1,0 +1,520 @@
+.wrapper {
+  position: relative;
+  height: 825px;
+  align-self: stretch;
+  background: var(--green);
+  background-size: 526px 725px;
+  background-repeat: no-repeat;
+  background-position: -93px 0px;
+  overflow: hidden;
+}
+
+.topTriangle {
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  background-color: var(--dark);
+  height: 18px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.bottomTriangle {
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background-color: var(--dark);
+  height: 18px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.imgCars {
+  position: absolute;
+  left: 0px;
+  bottom: 2px;
+  width: 300px;
+}
+
+.cross {
+  width: 18px;
+}
+
+.block1 {
+  display: flex;
+  width: 308px;
+  padding: 20px 20px 20px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 0px 20px 20px 0px;
+  background: var(--dark);
+  position: absolute;
+  top: 80px;
+}
+
+.block1Text {
+  color: #fff;
+  font-family: Unbounded, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.block1Text span {
+  color: var(--green);
+}
+
+.block1Body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.block1BodyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.block1BodyItemText {
+  flex: 1 0 0;
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+  text-transform: uppercase;
+}
+
+.block2 {
+  display: flex;
+  width: 308px;
+  padding: 20px 12px 20px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 20px 0px 0px 20px;
+  background: var(--dark);
+  position: absolute;
+  right: 0;
+  top: 377px;
+}
+
+.block2Text {
+  align-self: stretch;
+  color: #fff;
+  font-family: Unbounded, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.block2Body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.block2BodyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.block2BodyItemText {
+  flex: 1 0 0;
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+  text-transform: uppercase;
+}
+
+.imgPhone {
+  position: absolute;
+  width: 248px;
+  height: 510px;
+  top: 100px;
+  left: 304px;
+  display: none;
+}
+
+.imgSkuter {
+  position: absolute;
+  width: 103px;
+  height: 173px;
+  top: 81px;
+  left: 556px;
+  display: none;
+}
+
+.imgKerfin {
+  position: absolute;
+  width: 135px;
+  height: 278px;
+  top: 387px;
+  left: 592px;
+  display: none;
+}
+
+.imgBike {
+  position: absolute;
+  width: 118px;
+  height: 89px;
+  top: 459px;
+  left: 207px;
+  display: none;
+  z-index: 10;
+}
+
+.imgPowerbank {
+  position: absolute;
+  width: 363px;
+  height: 307px;
+  top: 418px;
+  left: -137px;
+  display: none;
+}
+
+@screen md {
+  .wrapper {
+    height: 1105px;
+    background-size: 688px 950px;
+    background-position: 40px -88px;
+  }
+
+  .topTriangle {
+    height: 40px;
+  }
+
+  .bottomTriangle {
+    height: 40px;
+  }
+
+  .imgCars {
+    bottom: 15px;
+    width: 500px;
+  }
+
+  .block1 {
+    width: 464px;
+    padding: 40px;
+    gap: 24px;
+    border-radius: 0px 30px 30px 0px;
+    top: 200px;
+  }
+
+  .block1Text {
+    font-size: 20px;
+  }
+
+  .cross {
+    width: 20px;
+  }
+
+  .block1BodyItemText {
+    font-size: 14px;
+  }
+
+  .block2 {
+    width: 464px;
+    padding: 40px 48px;
+    gap: 24px;
+    border-radius: 30px 0px 0px 30px;
+    top: 572px;
+  }
+
+  .block2Text {
+    font-size: 20px;
+  }
+
+  .block2BodyItemText {
+    font-size: 14px;
+  }
+
+  .imgPhone,
+  .imgSkuter,
+  .imgKerfin,
+  .imgBike,
+  .imgPowerbank {
+    display: block;
+  }
+}
+
+@screen lg {
+  .wrapper {
+    height: 1295px;
+    background-size: 741px 1023px;
+    background-position: 143px -116px;
+  }
+
+  .topTriangle {
+    height: 54px;
+  }
+
+  .bottomTriangle {
+    height: 54px;
+  }
+
+  .imgCars {
+    bottom: 15px;
+    width: 700px;
+  }
+
+  .block1 {
+    width: 656px;
+    padding: 40px 64px;
+    top: 220px;
+  }
+
+  .block1Text {
+    font-size: 24px;
+  }
+
+  .block1BodyItemText {
+    font-size: 16px;
+  }
+
+  .block2 {
+    width: 580px;
+    padding: 48px 64px;
+    top: 656px;
+  }
+
+  .block2Text {
+    font-size: 24px;
+  }
+
+  .block2BodyItemText {
+    font-size: 16px;
+  }
+
+  .imgPhone {
+    width: 282px;
+    height: 580px;
+    top: 120px;
+    left: 449px;
+  }
+
+  .imgSkuter {
+    width: 105px;
+    height: 177px;
+    top: 83px;
+    left: 718px;
+  }
+
+  .imgKerfin {
+    width: 205px;
+    height: 421px;
+    top: 391px;
+    left: 766px;
+  }
+
+  .imgBike {
+    width: 198px;
+    height: 149px;
+    top: 458px;
+    left: 271px;
+  }
+
+  .imgPowerbank {
+    width: 477px;
+    height: 403px;
+    top: 406px;
+    left: -188px;
+  }
+}
+
+@screen xl {
+  .cross,
+  .check {
+    margin-top: 5px;
+  }
+
+  .wrapper {
+    height: 1902px;
+    background-size: 1023px 1412px;
+    background-position: 188px -5px;
+  }
+
+  .topTriangle {
+    height: 75px;
+  }
+
+  .bottomTriangle {
+    height: 75px;
+  }
+
+  .imgCars {
+    bottom: 15px;
+    width: 1100px;
+  }
+
+  .block1 {
+    width: 710px;
+    padding: 64px 80px;
+    top: 467px;
+    gap: 48px;
+  }
+
+  .block1Text {
+    font-size: 28px;
+  }
+
+  .block1BodyItemText {
+    font-size: 20px;
+  }
+
+  .block2 {
+    width: 710px;
+    padding: 64px 80px;
+    top: 1043px;
+    gap: 48px;
+  }
+
+  .block2Text {
+    font-size: 28px;
+  }
+
+  .block2BodyItemText {
+    font-size: 20px;
+  }
+
+  .imgPhone {
+    width: 413px;
+    height: 851px;
+    top: 240px;
+    left: 622px;
+  }
+
+  .imgSkuter {
+    width: 143px;
+    height: 241px;
+    top: 241px;
+    left: 1010px;
+  }
+
+  .imgKerfin {
+    width: 298px;
+    height: 608px;
+    top: 637px;
+    left: 1061px;
+  }
+
+  .imgBike {
+    width: 287px;
+    height: 215px;
+    top: 833px;
+    left: 383px;
+  }
+
+  .imgPowerbank {
+    width: 717px;
+    height: 607px;
+    top: 776px;
+    left: -250px;
+  }
+}
+
+@screen 2xl {
+  .cross,
+  .check {
+    margin-top: 7px;
+  }
+
+  .wrapper {
+    height: 2395px;
+    background-size: 1324px 1827px;
+    background-position: 275px -69px;
+  }
+
+  .topTriangle {
+    height: 100px;
+  }
+
+  .bottomTriangle {
+    height: 100px;
+  }
+
+  .imgCars {
+    bottom: 25px;
+    width: 1500px;
+  }
+
+  .block1 {
+    width: 923px;
+    padding: 100px 120px;
+    top: 601px;
+  }
+
+  .block1Text {
+    font-size: 40px;
+  }
+
+  .block1BodyItemText {
+    font-size: 24px;
+  }
+
+  .block2 {
+    width: 928px;
+    padding: 100px 120px;
+    top: 1348px;
+  }
+
+  .block2Text {
+    font-size: 40px;
+  }
+
+  .block2BodyItemText {
+    font-size: 24px;
+  }
+
+  .imgPhone {
+    width: 546px;
+    height: 1126px;
+    top: 300px;
+    left: 826px;
+  }
+
+  .imgSkuter {
+    width: 185px;
+    height: 313px;
+    top: 242px;
+    left: 1340px;
+  }
+
+  .imgKerfin {
+    width: 299px;
+    height: 811px;
+    top: 789px;
+    left: 1401px;
+  }
+
+  .imgBike {
+    width: 396px;
+    height: 297px;
+    top: 1073px;
+    left: 470px;
+  }
+
+  .imgPowerbank {
+    width: 867px;
+    height: 734px;
+    top: 998px;
+    left: -300px;
+  }
+}

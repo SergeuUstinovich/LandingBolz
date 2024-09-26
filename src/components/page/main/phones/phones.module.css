@@ -1,0 +1,127 @@
+.wrapper {
+  display: flex;
+  height: 602px;
+  padding: 20px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.logo {
+  width: 152px;
+}
+
+.text {
+  color: #fff;
+  font-family: Unbounded, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  text-transform: uppercase;
+}
+
+.imagePhones {
+  width: 296px;
+}
+
+@screen md {
+  .wrapper {
+    height: 800px;
+    padding: 0;
+  }
+
+  .imagePhones {
+    width: 417px;
+    right: -27px;
+    position: absolute;
+    top: 0;
+  }
+
+  .description {
+    position: absolute;
+    gap: 48px;
+    width: 688px;
+    bottom: 64px;
+    left: 40px;
+  }
+
+  .logo {
+    width: 284px;
+  }
+
+  .text {
+    font-size: 32px;
+  }
+}
+
+@screen lg {
+  .imagePhones {
+    width: 445px;
+    right: -31px;
+    top: 23px;
+  }
+
+  .description {
+    width: 591px;
+    bottom: 120px;
+    left: 64px;
+  }
+
+  .logo {
+    width: 405px;
+  }
+}
+
+@screen xl {
+  .imagePhones {
+    width: 500px;
+    right: 0px;
+    top: 78px;
+  }
+
+  .description {
+    bottom: 80px;
+    left: 80px;
+    gap: 64px;
+    width: 738px;
+  }
+
+  .text {
+    font-size: 40px;
+  }
+}
+
+@screen 2xl {
+  .wrapper {
+    height: 902px;
+  }
+
+  .imagePhones {
+    width: 650px;
+    right: -11px;
+    top: 21px;
+  }
+
+  .description {
+    bottom: 120px;
+    left: 120px;
+    width: 972px;
+  }
+
+  .text {
+    font-size: 50px;
+  }
+}

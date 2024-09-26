@@ -1,0 +1,153 @@
+.wrapper {
+  display: flex;
+  padding: 80px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.tag {
+  @apply text-green;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-transform: uppercase;
+}
+
+.text {
+  color: #fff;
+  font-family: Unbounded, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  text-transform: uppercase;
+}
+
+.servicesBox {
+  display: none;
+}
+
+.servicesBox > div {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.servicesBoxRight {
+}
+
+.splide {
+  width: 100%;
+}
+
+@screen md {
+  .wrapper {
+    padding: 100px 40px;
+  }
+
+  .box {
+    gap: 80px;
+  }
+
+  .text {
+    font-size: 20px;
+    line-height: 150%; /* 22.4px */
+  }
+}
+
+@screen lg {
+  .wrapper {
+    padding: 120px 64px;
+  }
+
+  .box {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .textBox {
+    width: 440px;
+    margin-top: 80px;
+  }
+
+  .servicesBox {
+    width: 440px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .splide {
+    display: none;
+  }
+
+  .servicesBoxRight {
+    margin-top: 98px;
+  }
+}
+
+@screen xl {
+  .wrapper {
+    padding: 240px 80px;
+  }
+
+  .text {
+    font-size: 28px;
+  }
+
+  .textBox {
+    width: 522px;
+    margin-top: 160px;
+  }
+
+  .servicesBox {
+    width: 630px;
+  }
+
+  .servicesBoxRight {
+    margin-top: 138px;
+  }
+}
+
+@screen 2xl {
+  .wrapper {
+    padding: 300px 120px;
+  }
+
+  .text {
+    font-size: 36px;
+  }
+
+  .textBox {
+    width: 688px;
+  }
+
+  .servicesBox {
+    width: 830px;
+  }
+
+  .servicesBoxRight {
+    margin-top: 180px;
+  }
+}
