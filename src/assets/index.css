@@ -13,3 +13,20 @@
 body {
   @apply bg-black;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.link {
+}
+
+.link:hover {
+  color: var(--green);
+  text-decoration: line-through;
+}
+
+.active {
+  color: var(--green) !important;
+  text-decoration: line-through;
+}

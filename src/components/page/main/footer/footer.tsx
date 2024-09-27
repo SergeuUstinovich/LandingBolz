@@ -1,4 +1,3 @@
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactSVG } from 'react-svg'
 import styles from './footer.module.css'
 
@@ -11,11 +10,11 @@ export const Footer = () => {
         </a>
         <div className={styles.topRight}>
           <div className={styles.menu}>
-            <AnchorLink href={'#easy-use'}>О сервисе</AnchorLink>
-            <AnchorLink href={'#how-to-get'}>Как это работает</AnchorLink>
-            <AnchorLink href={'#feature'}>Партнеры</AnchorLink>
-            <AnchorLink href={'#soon'}>Программа лояльности</AnchorLink>
-            <AnchorLink href={'#form'}>Faq</AnchorLink>
+            <a href={'#easy-use'}>О сервисе</a>
+            <a href={'#how-to-get'}>Как это работает</a>
+            <a href={'#feature'}>Партнеры</a>
+            <a href={'#soon'}>Программа лояльности</a>
+            <a href={'#form'}>Faq</a>
           </div>
           <div className={styles.contacts}>
             <div className={styles.contactBox}>

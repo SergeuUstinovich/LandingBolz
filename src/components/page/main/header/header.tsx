@@ -1,4 +1,4 @@
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { useEffect } from 'react'
 import { ReactSVG } from 'react-svg'
 import { ButtonLink } from '../../../button-link'
 import styles from './header.module.css'
@@ -17,19 +17,41 @@ const menu: TMenu = [
 ]
 
 export const Header = () => {
+  useEffect(() => {
+    let mainNavLinks = document.querySelectorAll('.link')
+
+    window.addEventListener('scroll', (event) => {
+      let fromTop = window.scrollY - 50
+
+      mainNavLinks.forEach((link) => {
+        // @ts-ignore
+        let section = document.querySelector(link.hash)
+
+        if (
+          section.offsetTop <= fromTop + 55 &&
+          section.offsetTop + section.offsetHeight > fromTop + 55
+        ) {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
+    })
+  }, [])
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <a href="http://bolz.tech">
           <ReactSVG src={'assets/logoWithTech.svg'} className={styles.logo} />
         </a>
-        <ul className={styles.menu}>
+        <div className={styles.menu}>
           {menu.map(({ label, href }) => (
-            <AnchorLink href={href} key={href}>
-              <li>{label}</li>
-            </AnchorLink>
+            <a href={href} key={href} className={'link'}>
+              {label}
+            </a>
           ))}
-        </ul>
+        </div>
         <ButtonLink href={'https://service.bolz.tech'} target={'_blank'}>
           Попробовать
         </ButtonLink>

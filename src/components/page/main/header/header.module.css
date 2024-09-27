@@ -27,7 +27,7 @@
   gap: 24px;
 }
 
-.menu li {
+.menu a {
   padding: 8px 0px;
   display: flex;
   justify-content: center;
@@ -40,11 +40,6 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: uppercase;
-}
-
-.menu li:hover {
-  color: var(--green);
-  text-decoration: line-through;
 }
 
 @screen md {
