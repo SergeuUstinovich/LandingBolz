@@ -4,7 +4,7 @@ import styles from './feature.module.css'
 
 export const Feature = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={'feature'}>
       <div className={styles.box}>
         <div className={styles.top}>
           <div className={styles.topText}>

@@ -11,7 +11,7 @@ export const WhereAreWe = () => {
         </div>
 
         <div className={styles.logoBox}>
-          <a href="#">
+          <a href="https://sravni.ru" target={'_blank'}>
             <ReactSVG src={'assets/logoSravni.svg'} className={styles.logo} />
           </a>
         </div>

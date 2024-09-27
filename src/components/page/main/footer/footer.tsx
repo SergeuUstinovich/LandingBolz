@@ -1,3 +1,4 @@
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactSVG } from 'react-svg'
 import styles from './footer.module.css'
 
@@ -5,23 +6,29 @@ export const Footer = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.top}>
-        <ReactSVG src={'assets/BOLZ.svg'} className={styles.logo} />
+        <a href="http://bolz.tech">
+          <ReactSVG src={'assets/BOLZ.svg'} className={styles.logo} />
+        </a>
         <div className={styles.topRight}>
           <div className={styles.menu}>
-            <a href={'#'}>О сервисе</a>
-            <a href={'#'}>Как это работает</a>
-            <a href={'#'}>Программа лояльности</a>
-            <a href={'#'}>Партнеры</a>
-            <a href={'#'}>Faq</a>
+            <AnchorLink href={'#easy-use'}>О сервисе</AnchorLink>
+            <AnchorLink href={'#how-to-get'}>Как это работает</AnchorLink>
+            <AnchorLink href={'#feature'}>Партнеры</AnchorLink>
+            <AnchorLink href={'#soon'}>Программа лояльности</AnchorLink>
+            <AnchorLink href={'#form'}>Faq</AnchorLink>
           </div>
           <div className={styles.contacts}>
             <div className={styles.contactBox}>
               <ReactSVG src={'assets/mail.svg'} />
-              <div className={styles.contact}>bolz@zaryad.ru</div>
+              <a href="mailto:info@bolz.tech">
+                <div className={styles.contact}>info@bolz.tech</div>
+              </a>
             </div>
             <div className={styles.contactBox}>
               <ReactSVG src={'assets/telegram.svg'} />
-              <div className={styles.contact}>@bolzbot</div>
+              <a href="https://t.me/BolzSupport_bot">
+                <div className={styles.contact}>@BolzSupport_bot</div>
+              </a>
             </div>
           </div>
         </div>

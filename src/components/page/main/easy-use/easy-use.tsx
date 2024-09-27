@@ -4,6 +4,7 @@ import styles from './easy-use.module.css'
 export const EasyUse = () => {
   return (
     <div
+      id="easy-use"
       className={styles.wrapper}
       style={{ backgroundImage: 'url(/assets/easyUse/arrow.png)' }}
     >

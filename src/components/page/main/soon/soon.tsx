@@ -3,7 +3,7 @@ import styles from './soon.module.css'
 
 export const Soon = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={'soon'}>
       <div className={styles.top}>
         <img src="assets/soon.png" alt="" className={styles.img} />
       </div>

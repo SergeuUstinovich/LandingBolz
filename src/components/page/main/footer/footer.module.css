@@ -39,7 +39,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 16px */
-  text-transform: uppercase;
 }
 
 .bottom {
@@ -83,6 +82,11 @@
 
 .menu {
   display: none;
+}
+
+.menu a:hover {
+  color: var(--green);
+  text-decoration: line-through;
 }
 
 .imgUnion {

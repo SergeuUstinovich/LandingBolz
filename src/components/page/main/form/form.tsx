@@ -3,7 +3,7 @@ import styles from './form.module.css'
 
 export const Form = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={'form'}>
       <div className={styles.box}>
         <div className={styles.title}>Остались вопросы? Напиши нам</div>
         <div className={styles.body}>

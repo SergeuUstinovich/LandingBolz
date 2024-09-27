@@ -1,5 +1,6 @@
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ReactSVG } from 'react-svg'
-import { Button } from '../../../button'
+import { ButtonLink } from '../../../button-link'
 import styles from './header.module.css'
 
 type TMenu = {
@@ -8,26 +9,30 @@ type TMenu = {
 }[]
 
 const menu: TMenu = [
-  { href: 'about', label: 'О сервисе' },
-  { href: 'how', label: 'Как это работает' },
-  { href: 'loyalty', label: 'Программа лояльности' },
-  { href: 'partners', label: 'Партнеры' },
-  { href: 'faq', label: 'Faq' },
+  { href: '#easy-use', label: 'О сервисе' },
+  { href: '#how-to-get', label: 'Как это работает' },
+  { href: '#feature', label: 'Партнеры' },
+  { href: '#soon', label: 'Программа лояльности' },
+  { href: '#form', label: 'Faq' },
 ]
 
 export const Header = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <ReactSVG src={'assets/logoWithTech.svg'} className={styles.logo} />
+        <a href="http://bolz.tech">
+          <ReactSVG src={'assets/logoWithTech.svg'} className={styles.logo} />
+        </a>
         <ul className={styles.menu}>
           {menu.map(({ label, href }) => (
-            <a href={'#'} key={href}>
+            <AnchorLink href={href} key={href}>
               <li>{label}</li>
-            </a>
+            </AnchorLink>
           ))}
         </ul>
-        <Button>Попробовать</Button>
+        <ButtonLink href={'https://service.bolz.tech'} target={'_blank'}>
+          Попробовать
+        </ButtonLink>
       </div>
     </div>
   )

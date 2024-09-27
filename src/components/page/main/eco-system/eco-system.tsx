@@ -2,6 +2,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import { ReactSVG } from 'react-svg'
 import { Button } from '../../../button'
+import { ButtonLink } from '../../../button-link'
 import { Service } from '../../../service'
 import styles from './eco-system.module.css'
 
@@ -15,15 +16,19 @@ export const EcoSystem = () => {
             МЫ РаЗВИВАЕМ НАШУ ЭКОСИСТЕМУ сервисов и В ближайшее время предложим
             ещё больше шеринга от Партнёров
           </p>
-          <Button className={'flex gap-[12px]'}>
+          <ButtonLink
+            className={'flex gap-[12px]'}
+            href={'https://service.bolz.tech'}
+            target={'_blank'}
+          >
             <ReactSVG src={'assets/union.svg'} className={'w-[13px]'} />
             <div>Попробовать</div>
-          </Button>
+          </ButtonLink>
         </div>
 
         <div className={styles.servicesBox}>
           <div>
-            <a href="#">
+            <a href={'https://service.bolz.tech'} target={'_blank'}>
               <Service
                 iconName={'powerbank'}
                 title={'Пауэрбанки'}

@@ -17,7 +17,7 @@ const getItem = (text: string, number: number) => {
 
 export const HowToGet = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={'how-to-get'}>
       <div className={styles.title}>
         Как получить услугу
         <div>за 5 шагов</div>
