@@ -9,7 +9,11 @@ function HeaderAbout() {
                 <ReactSVG src={`assets/arrowBack.svg`} className={style.svg}/>
                 <p className={style.descrBack}>На главную</p>
             </Link>
-            <p className={style.descr}>О нас</p>
+            <div className={style.boxAbout}>
+                <ReactSVG src={`assets/aboutUsBg.svg`} className={style.svgAbout}/>
+                <p className={style.descr}>О нас</p>
+            </div>
+            
         </div>
     )
 }
