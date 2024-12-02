@@ -1,12 +1,12 @@
-import { useEffect } from 'react'
-import { ReactSVG } from 'react-svg'
-import { ButtonLink } from '../../../button-link'
-import styles from './header.module.css'
+import React, { useEffect, useRef } from 'react';
+import { ReactSVG } from 'react-svg';
+import { ButtonLink } from '../../../button-link';
+import styles from './header.module.css';
 
 type TMenu = {
-  href: string
-  label: string
-}[]
+  href: string;
+  label: string;
+}[];
 
 const menu: TMenu = [
   { href: '#easy-use', label: 'О сервисе' },
@@ -14,30 +14,42 @@ const menu: TMenu = [
   { href: '#feature', label: 'Партнеры' },
   { href: '#soon', label: 'Программа лояльности' },
   { href: '#form', label: 'Faq' },
-]
+];
 
 export const Header = () => {
+  const mainNavLinksRef = useRef<NodeListOf<Element> | null>(null);
+
   useEffect(() => {
-    let mainNavLinks = document.querySelectorAll('.link')
+    const handleScroll = () => {
+      if (mainNavLinksRef.current) {
+        const fromTop = window.scrollY - 50;
+        
+        mainNavLinksRef.current.forEach((link) => {
+          const href = link.getAttribute('href');
+          if (href) {
+            const section = document.querySelector(href) as HTMLElement;
+            if (section) {
+              if (
+                section.offsetTop <= fromTop + 55 &&
+                section.offsetTop + section.offsetHeight > fromTop + 55
+              ) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            }
+          }
+        });
+      }
+    };
 
-    window.addEventListener('scroll', (event) => {
-      let fromTop = window.scrollY - 50
+    mainNavLinksRef.current = document.querySelectorAll('.link');
+    window.addEventListener('scroll', handleScroll);
 
-      mainNavLinks.forEach((link) => {
-        // @ts-ignore
-        let section = document.querySelector(link.hash)
-
-        if (
-          section.offsetTop <= fromTop + 55 &&
-          section.offsetTop + section.offsetHeight > fromTop + 55
-        ) {
-          link.classList.add('active')
-        } else {
-          link.classList.remove('active')
-        }
-      })
-    })
-  }, [])
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -57,5 +69,5 @@ export const Header = () => {
         </ButtonLink>
       </div>
     </div>
-  )
-}
+  );
+};

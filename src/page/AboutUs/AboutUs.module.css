@@ -1,0 +1,5 @@
+.wrapper {
+    @apply lg:container;
+    @apply bg-dark;
+  }
+  

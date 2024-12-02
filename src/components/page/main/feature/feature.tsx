@@ -1,6 +1,7 @@
 import { ReactSVG } from 'react-svg'
 import { Button } from '../../../button'
 import styles from './feature.module.css'
+import { Link } from 'react-router-dom'
 
 export const Feature = () => {
   return (
@@ -18,11 +19,11 @@ export const Feature = () => {
           <div className={styles.topButtons}>
             <Button className={styles.button}>
               <ReactSVG src={'assets/union.svg'} className={'w-[13px]'} />
-              <div>Стать партнером</div>
+              <Link to={'/about-service'}>Стать партнером</Link>
             </Button>
 
             <button className={styles.more}>
-              <span className={styles.moreTitle}>Узнать подробнее</span>
+              <Link to={'/about-us'} className={styles.moreTitle}>Узнать подробнее</Link>
             </button>
           </div>
         </div>
