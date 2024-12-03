@@ -1,0 +1,159 @@
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion__content.open {
+  max-height: 100%;
+  margin-bottom: 40px;
+}
+
+.boximg {
+  margin-bottom: 240px;
+}
+.boxInfo {
+  max-width: 1680px;
+  width: 100%;
+  padding: 0 120px;
+  margin-bottom: 120px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.boxInfo:last-child {
+  margin-bottom: 240px;
+}
+
+.title_slide {
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+  margin-right: 16px;
+}
+
+.boxSlide {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.boxTitle {
+  display: flex;
+  margin-right: auto;
+}
+.svgAbout {
+  padding-top: 9px;
+  margin-right: 24px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+  opacity: 0.5;
+}
+
+.boxDescr {
+  width: 972px;
+}
+
+.descr {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+  color: white;
+  opacity: 0.5;
+}
+
+.descr:first-child {
+  margin-bottom: 24px;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
+}
+
+.arrowUp.openUp {
+  transform: rotate(0);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1440px) {
+  .boxInfo {
+    padding: 0 80px;
+    margin-bottom: 80px;
+  }
+
+  .boxDescr {
+    width: 738px;
+  }
+
+  .title {
+    width: 191px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .boximg {
+    margin-bottom: 120px;
+  }
+  .boxInfo:last-child {
+    margin-bottom: 120px;
+  }
+  .boxInfo {
+    padding: 0 64px;
+    margin-bottom: 64px;
+  }
+  .boxDescr {
+    width: 576px;
+  }
+  .title {
+    width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .boximg {
+    margin-bottom: 100px;
+  }
+
+  .boxInfo:last-child {
+    margin-bottom: 100px;
+  }
+  .boxInfo {
+    padding: 0 40px;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .boxDescr {
+    width: 100%;
+  }
+  .title {
+    width: 100%;
+  }
+
+  .boxTitle {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .boximg {
+    margin-bottom: 80px;
+  }
+  .boxInfo:last-child {
+    margin-bottom: 80px;
+  }
+  .boxInfo {
+    padding: 0 12px;
+    margin-bottom: 64px;
+  }
+}

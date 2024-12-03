@@ -3,3 +3,76 @@
     @apply bg-dark;
   }
   
+  .boximg {
+    margin-bottom: 140px;
+  }
+
+  .boxTitle {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 140%;
+    color: white;
+    opacity: 0.2;
+    margin: 0 auto;
+    padding-bottom: 140px;
+  }
+
+  .title:hover {
+    color: #14dd7c;
+    opacity: 1;
+  }
+
+  @media (max-width: 1440px) {
+    .boximg {
+      margin-bottom: 120px;
+    }
+    .title {
+      padding-bottom: 120px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .boximg {
+      margin-bottom: 100px;
+    }
+    .title {
+      padding-bottom: 100px;
+      font-size: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .boximg {
+      margin-bottom: 80px;
+    }
+    .title {
+      padding-bottom: 80px;
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 410px) {
+    .boximg {
+      margin-bottom: 60px;
+    }
+    .title {
+      padding-bottom: 60px;
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .boximg {
+      margin-bottom: 60px;
+    }
+    .title {
+      padding-bottom: 60px;
+      font-size: 20px;
+    }
+  }

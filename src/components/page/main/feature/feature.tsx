@@ -1,9 +1,17 @@
 import { ReactSVG } from 'react-svg'
 import { Button } from '../../../button'
 import styles from './feature.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Feature = () => {
+  const navigate = useNavigate()
+  const handleNavigate = () => {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      navigate('/about-us');
+    }, 1000);
+  };
+  
   return (
     <div className={styles.wrapper} id={'feature'}>
       <div className={styles.box}>
@@ -22,8 +30,8 @@ export const Feature = () => {
               <Link to={'/about-service'}>Стать партнером</Link>
             </Button>
 
-            <button className={styles.more}>
-              <Link to={'/about-us'} className={styles.moreTitle}>Узнать подробнее</Link>
+            <button onClick={handleNavigate} className={styles.more}>
+              <p className={styles.moreTitle}>Узнать подробнее</p>
             </button>
           </div>
         </div>

@@ -10,12 +10,10 @@ const HeroAbout: React.FC = () => {
   const is1440 = useMediaQuery({ query: '(min-width: 1440px)' })
   const is1024 = useMediaQuery({ query: '(min-width: 1024px)' })
   const is768 = useMediaQuery({ query: '(min-width: 768px)' })
-  const is320 = useMediaQuery({ query: '(min-width: 320px)' })
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const box = boxRef.current;
-
     if (canvas && box) {
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
@@ -26,29 +24,32 @@ const HeroAbout: React.FC = () => {
       canvas.height = boxRect.height;
 
       // Отрисовать текст белым цветом
-      TextCanvas(ctx, 'rgba(255, 255, 255, 0.1)', is1920, is1440, is1024, is768, is320)
+      // TextCanvas(ctx, 'rgba(255, 255, 255, 0.1)', is1920, is1440, is1024, is768)
 
       const handleMouseMove = (event: MouseEvent) => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        TextCanvas(ctx, 'rgba(255, 255, 255, 0.1)', is1920, is1440, is1024, is768, is320)
-        
+        TextCanvas(ctx, 'rgba(255, 255, 255, 0.1)', is1920, is1440, is1024, is768)
         // Получить координаты мыши относительно box
         const x = event.clientX - boxRect.left;
         const y = event.clientY - boxRect.top;
 
         // Настроить область клипа для зеленого текста
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(x, y, 70, 0, 2 * Math.PI);
-        ctx.clip();
+        ctx.save();  
+        ctx.beginPath(); 
+        ctx.arc(x, y, 70, 0, 2 * Math.PI); 
+        ctx.clip(); 
+        // const clippingRegion = ctx.getImageData(x, y, 1, 1);
+        
+        ctx.fillStyle = 'rgba(20, 217, 123, 1)';
+        // ctx.fillText('ТЕКСТ ВНУТРИ КЛИПА', x, y);
+        TextCanvas(ctx, ctx.fillStyle, is1920, is1440, is1024, is768); 
+        
+        ctx.restore(); 
 
-        // Отрисовать текст зеленым цветом в области клипа
-        TextCanvas(ctx, '#14d97b', is1920, is1440, is1024, is768, is320)
-        // Восстановить состояние контекста
-        ctx.restore();
       };
 
-      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mousemove', handleMouseMove); // Выполнить начальную отрисовку 
+      TextCanvas(ctx, 'rgba(255, 255, 255, 0.1)', is1920, is1440, is1024, is768);
       return () => document.removeEventListener('mousemove', handleMouseMove);
     }
   }, [is1920, is1440, is1024, is768]);
