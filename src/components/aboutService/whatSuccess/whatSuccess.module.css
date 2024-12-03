@@ -1,0 +1,45 @@
+.whatsuccess__section {
+  padding-bottom: 300px;
+}
+
+.whatsuccess__title {
+  margin-bottom: 60px;
+  font-family: 'Unbounded';
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 59.52px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.whatsuccess__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.whatsuccess__item {
+  padding: 32px;
+  font-family: 'Manrope';
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #002a3a;
+  border-radius: 40px;
+
+  svg {
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+}

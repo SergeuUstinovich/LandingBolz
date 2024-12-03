@@ -1,0 +1,16 @@
+.model__section {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.model__title {
+  margin-bottom: 100px;
+  max-width: 45%;
+  font-family: 'Unbounded';
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 59.52px;
+  text-transform: uppercase;
+  color: #fff;
+}
