@@ -1,13 +1,18 @@
-export const WhatsuccessSSvg = () => {
+interface IWhat {
+  className: string
+}
+
+export const WhatsuccessSSvg = ({ className }: IWhat) => {
   return (
     <svg
+      className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_537_1871)">
+      <g clipPath="url(#clip0_537_1871)">
         <path
           d="M11.9984 5.6123C9.61491 5.6123 7.67578 7.55143 7.67578 9.93493C7.67578 12.3184 9.61491 14.2576 11.9984 14.2576C14.3819 14.2576 16.321 12.3184 16.321 9.93493C16.321 7.55143 14.3819 5.6123 11.9984 5.6123Z"
           fill="white"

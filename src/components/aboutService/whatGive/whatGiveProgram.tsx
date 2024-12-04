@@ -32,7 +32,7 @@ export const WhatGiveProgram = () => {
   return (
     <ul className={style.whatgivedown__grid}>
       {whatGiveArr.map((element) => (
-        <li key={element.id}>
+        <li className={style.whatgive__gitem} key={element.id}>
           <svg
             width="22"
             height="15"
@@ -48,8 +48,8 @@ export const WhatGiveProgram = () => {
               strokeLinejoin="round"
             />
           </svg>
-          <h4>{element.title}</h4>
-          <p>{element.label}</p>
+          <h4 className={style.whatgive__gtitle}>{element.title}</h4>
+          <p className={style.whatgive__glabel}>{element.label}</p>
         </li>
       ))}
     </ul>

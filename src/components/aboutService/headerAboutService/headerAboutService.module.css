@@ -1,3 +1,9 @@
+.header__container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1680px;
+}
+
 .header__section {
   padding-top: 60px;
   display: flex;
@@ -38,4 +44,36 @@
   color: #14dd7c;
   text-transform: uppercase;
   border-bottom: 2px solid #14dd7c;
+}
+
+@media (max-width: 1200px) {
+  .header__link {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .header__section {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__section {
+    justify-content: flex-start;
+  }
+  .header__about {
+    margin-right: 24px;
+    order: 1;
+  }
+  .burger {
+    order: 2;
+  }
+  .header__back {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__section {
+    padding-top: 20px;
+  }
 }

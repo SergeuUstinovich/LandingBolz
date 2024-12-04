@@ -3,7 +3,7 @@ import style from './heroAboutService.module.css'
 export const HeroAboutService = () => {
   return (
     <section id="hero" className={style.hero__section}>
-      <div className="container">
+      <div className={style.hero__container}>
         <h1 className={style.hero__title}>
           <img
             width={405}

@@ -4,7 +4,7 @@ import style from './formService.module.css'
 export const FormService = () => {
   return (
     <section className={style.form__section}>
-      <div className="container">
+      <div className={style.form__container}>
         <div className={style.form__block}>
           <h2 className={style.form__title}>
             Инвестируй и зарабатывай вместе с нами
@@ -16,10 +16,12 @@ export const FormService = () => {
               type="email"
             />
             <div className={style.form__submit}>
-              <Button>Отправить</Button>
-              <p>
+              <Button className={style.form__button}>Отправить</Button>
+              <p className={style.submit__label}>
                 Отправляя свои данные, вы даете согласие на условия
-                <a href="#">обработки персональных данных</a>
+                <a className={style.submit__link} href="#">
+                  обработки персональных данных
+                </a>
               </p>
             </div>
           </form>

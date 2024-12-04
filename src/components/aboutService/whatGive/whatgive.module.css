@@ -2,6 +2,12 @@
   padding: 200px 0 300px;
 }
 
+.whatgive__container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1680px;
+}
+
 .whatgive__title {
   margin-bottom: 60px;
   font-family: 'Unbounded';
@@ -15,19 +21,19 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
 
-  h3 {
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-family: 'Unbounded';
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 34.72px;
-    color: #fff;
-    text-transform: uppercase;
-  }
+.whative__h3 {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: 'Unbounded';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34.72px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .whatgive__item {
@@ -40,58 +46,35 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
 
-  li {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    font-family: 'Manrope';
-    color: #fff;
-    background-color: #05111f;
-    border-radius: 40px;
+.whatgive__gtitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
 
-    h4 {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 28.8px;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 27px;
-    }
-  }
+.whatgive__glabel {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
 }
 
 .whatgivedown__grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
+}
 
-  li {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    font-family: 'Manrope';
-    color: #fff;
-    background-color: #05111f;
-    border-radius: 40px;
-
-    h4 {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 28.8px;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 27px;
-    }
-  }
+.whatgive__gitem {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: 'Manrope';
+  color: #fff;
+  background-color: #05111f;
+  border-radius: 40px;
 }
 
 .whatgive__flex {
@@ -99,4 +82,110 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   align-items: center;
+}
+
+@media (max-width: 1600px) {
+  .whatgive__section {
+    padding: 180px 0 240px;
+  }
+  .whatgive__title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 49.6px;
+  }
+
+  .whatgive__item {
+    padding: 64px;
+  }
+
+  .whatgive__gtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .whatgive__glabel {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .whatgive__section {
+    padding: 120px 0;
+  }
+  .whatgive__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.76px;
+  }
+  .whatgive__item {
+    padding: 40px;
+  }
+  .what__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .whatgive__flex {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .whatgive__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .whative__h3 {
+    font-size: 20px;
+    line-height: 24.8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .whatgive__section {
+    padding: 100px 0;
+  }
+  .whatgive__title {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .whatgive__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .whative__h3 {
+    font-size: 16px;
+    line-height: 19.84px;
+  }
+}
+
+@media (max-width: 576px) {
+  .whatgive__section {
+    padding: 80px 0;
+  }
+  .whatgive__title {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+  }
+  .whatgive__item {
+    padding: 24px 16px;
+  }
+
+  .whatgive__gtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .whatgive__glabel {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
 }

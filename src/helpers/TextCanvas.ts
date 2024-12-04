@@ -5,10 +5,8 @@ export function TextCanvas(
     is1440: boolean,
     is1024: boolean,
     is768: boolean,
-    is320: boolean,
 ) 
 {
-    console.log(is1920, is1440)
     ctx.fillStyle = color;
     ctx.textBaseline = 'top';
     if(is1920) {

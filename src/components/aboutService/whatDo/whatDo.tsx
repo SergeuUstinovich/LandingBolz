@@ -15,25 +15,25 @@ interface IWhatDo {
 const whatDoArr: IWhatDo[] = [
   {
     id: 1,
-    icon: <WhatdoFSvg />,
+    icon: <WhatdoFSvg className={style.whatdo__svg} />,
     title: 'Разработка ПО приложения',
     label: 'web-app сервиса',
   },
   {
     id: 2,
-    icon: <WhatdoSSvg />,
+    icon: <WhatdoSSvg className={style.whatdo__svg} />,
     title: 'Внедрение ПО Bolz',
     label: 'URL ссылка в баннер главной страницы приложения',
   },
   {
     id: 3,
-    icon: <WhatdoTSvg />,
+    icon: <WhatdoTSvg className={style.whatdo__svg} />,
     title: 'Подключение к экосистеме',
     label: 'терминальной сети зарядок партнеров ',
   },
   {
     id: 4,
-    icon: <WhatdoFoSvg />,
+    icon: <WhatdoFoSvg className={style.whatdo__svg} />,
     title: 'Монетизация',
     label: 'делимся до 40% полученного revenue',
   },
@@ -42,14 +42,14 @@ const whatDoArr: IWhatDo[] = [
 export const WhatDo = () => {
   return (
     <section id="whatdo" className={style.whatdo__section}>
-      <div className="container">
+      <div className={style.whatdo__container}>
         <h2 className={style.whatdo__title}>Что делаем мы</h2>
         <ul className={style.whatdo__grid}>
           {whatDoArr.map((element) => (
             <li className={style.whatdo__item} key={element.id}>
               {element.icon}
-              <h3>{element.title}</h3>
-              <p>{element.label}</p>
+              <h3 className={style.whatdo__ititle}>{element.title}</h3>
+              <p className={style.whatdo__ilabel}>{element.label}</p>
             </li>
           ))}
         </ul>

@@ -4,7 +4,7 @@ import style from './whatgive.module.css'
 export const WhatGiveDown = () => {
   return (
     <div>
-      <h3>
+      <h3 className={style.whative__h3}>
         <img src={'/assets/aboutservice/what__down.png'} alt="иконка" />
         приложениям
       </h3>

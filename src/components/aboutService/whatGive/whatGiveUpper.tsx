@@ -30,7 +30,7 @@ const whatGiveArr: IWhatGive[] = [
 export const WhatGiveUpper = () => {
   return (
     <div>
-      <h3>
+      <h3 className={style.whative__h3}>
         <img
           src={'/assets/aboutservice/what__upper.png'}
           alt="иконка с конструкцией"
@@ -39,7 +39,7 @@ export const WhatGiveUpper = () => {
       </h3>
       <ul className={style.what__grid}>
         {whatGiveArr.map((element) => (
-          <li key={element.id}>
+          <li className={style.whatgive__gitem} key={element.id}>
             <svg
               width="22"
               height="15"
@@ -55,8 +55,8 @@ export const WhatGiveUpper = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h4>{element.title}</h4>
-            <p>{element.label}</p>
+            <h4 className={style.whatgive__gtitle}>{element.title}</h4>
+            <p className={style.whatgive__glabel}>{element.label}</p>
           </li>
         ))}
       </ul>

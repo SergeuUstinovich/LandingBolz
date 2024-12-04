@@ -1,5 +1,11 @@
+.hero__container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1680px;
+}
+
 .hero__section {
-  background-image: url('../../../../public/assets/aboutservice/1920__hero.png');
+  background-image: url('../../../../public/assets/aboutservice/1920.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right center;
@@ -17,4 +23,51 @@
   line-height: 70px;
   color: #fff;
   text-transform: uppercase;
+}
+
+@media (max-width: 1600px) {
+  .hero__title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .hero__section {
+    background-image: url('../../../../public/assets/aboutservice/1440.png');
+    background-position: calc(100% + 8em) 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__title {
+    font-size: 32px;
+    line-height: 44.8px;
+    gap: 48px;
+  }
+  .hero__section {
+    background-image: url('../../../../public/assets/aboutservice/1024.png');
+    background-size: 504px 500px;
+    background-position: calc(100% + 2em) 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__section {
+    background-image: url('../../../../public/assets/aboutservice/768.png');
+    background-size: 376px 450px;
+    background-position: 100% 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__title {
+    padding-bottom: 0;
+    max-width: 70%;
+    font-size: 16px;
+    line-height: 22.4px;
+    gap: 24px;
+  }
+  .hero__section {
+    background-image: url('../../../../public/assets/aboutservice/320.png');
+    background-size: 296px 354px;
+    background-position: center top;
+  }
 }

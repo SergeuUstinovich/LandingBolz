@@ -1,4 +1,7 @@
+import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
+import { BurgerSvg } from '../../../assets/svg/burgerSvg'
+import { HeaderArrowSvg } from '../../../assets/svg/headerArrowSvg'
 import style from './headerAboutService.module.css'
 
 interface IHeader {
@@ -31,53 +34,35 @@ const headerAboutArr: IHeader[] = [
 ]
 
 export const HeaderAboutService = () => {
+  const mediaQuery = useMediaQuery({
+    query: '(min-width: 1200px)',
+  })
+  const mediaPhoneQuery = useMediaQuery({
+    query: '(max-width: 992px)',
+  })
   return (
     <header>
-      <div className="container">
+      <div className={style.header__container}>
         <div className={style.header__section}>
           <Link className={style.header__back} to={'/'}>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 12H19"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M10 7L5 12"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M10 17L5 12"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            На главную
+            <HeaderArrowSvg />
+            {mediaQuery && <span>На главную</span>}
           </Link>
-          <nav>
-            <ul className={style.header__list}>
-              {headerAboutArr.map((element) => (
-                <li key={element.id}>
-                  <Link className={style.header__link} to={element.path}>
-                    {element.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          {mediaPhoneQuery ? (
+            <BurgerSvg className={style.burger} />
+          ) : (
+            <nav>
+              <ul className={style.header__list}>
+                {headerAboutArr.map((element) => (
+                  <li key={element.id}>
+                    <Link className={style.header__link} to={element.path}>
+                      {element.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
           <Link className={style.header__about} to={'about-service'}>
             О нас
           </Link>
