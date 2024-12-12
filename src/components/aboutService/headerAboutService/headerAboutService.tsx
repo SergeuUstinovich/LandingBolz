@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
 import { BurgerSvg } from '../../../assets/svg/burgerSvg'
 import { HeaderArrowSvg } from '../../../assets/svg/headerArrowSvg'
+import { ModalPhone } from '../modalPhone/modalPhone'
 import style from './headerAboutService.module.css'
 
 interface IHeader {
@@ -34,6 +36,16 @@ const headerAboutArr: IHeader[] = [
 ]
 
 export const HeaderAboutService = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleOpen = () => {
+    setIsOpen(true)
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
   const mediaQuery = useMediaQuery({
     query: '(min-width: 1200px)',
   })
@@ -49,7 +61,9 @@ export const HeaderAboutService = () => {
             {mediaQuery && <span>На главную</span>}
           </Link>
           {mediaPhoneQuery ? (
-            <BurgerSvg className={style.burger} />
+            <button onClick={handleOpen} className={style.burger__btn}>
+              <BurgerSvg className={style.burger} />
+            </button>
           ) : (
             <nav>
               <ul className={style.header__list}>
@@ -68,6 +82,7 @@ export const HeaderAboutService = () => {
           </Link>
         </div>
       </div>
+      <ModalPhone onClose={handleClose} isOpen={isOpen} />
     </header>
   )
 }

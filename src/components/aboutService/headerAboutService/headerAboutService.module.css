@@ -64,7 +64,9 @@
     margin-right: 24px;
     order: 1;
   }
-  .burger {
+  .burger__btn {
+    border: none;
+    outline: none;
     order: 2;
   }
   .header__back {
