@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import HeaderAbout from '../../components/HeaderAbout/HeaderAbout'
 import HeroAbout from '../../components/HeroAbout/HeroAbout'
@@ -14,14 +13,14 @@ function AboutUs() {
       <div className={style.boximg}>
         <picture>
           <source
-            srcSet="assets/aboutParthners320.png"
+            srcSet="assets/aboutParthners320.webp"
             media="(max-width: 320px)"
           />
           <source
-            srcSet="assets/aboutParthners768.png"
+            srcSet="assets/aboutParthners768.webp"
             media="(max-width: 768px)"
           />
-          <img src="assets/aboutParthners.png" alt="Партнеры" />
+          <img src="assets/aboutParthners.webp" alt="Партнеры" />
         </picture>
       </div>
       <div className={style.boxTitle}>
